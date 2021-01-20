@@ -3,7 +3,7 @@
 
 
 ### Documentation 
-This repository contains code to replicate the simulation results in the paper. We do not include data for replicating the internal FB results but include the code.
+This repository contains code to replicate the simulation results in the paper. We do not include data for replicating the internal FB results but note that the code architecture is the same as the simulation.
 
 ### Directions
 [placeholder]
