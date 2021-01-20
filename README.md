@@ -9,7 +9,7 @@ This repository contains code to replicate the simulation results in the paper. 
 There are two ways to run the Watts-Strogatz simulation notebook:
 1. Run all the code (including network generation and MC replicates) in notebook 'GithubWWW2021_WS_assignment_local.ipynb' --- Warning: this can take a long time.
 A fast way to run it (it can be run locally; uploading probabilities_ws.csv may be too large to upload to bento):
-2. Use 'data_ws.csv' and 'probabilities_ws.npy" and start in the middle of the notebook
+2. Use 'data_ws.csv' and 'probabilities_ws.npy' and start in the middle of the notebook
 Start from and skip generate process
 
 ```
