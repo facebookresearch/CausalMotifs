@@ -12,10 +12,10 @@ A fast way to run it (it can be run locally; uploading probabilities_ws.csv may 
 2. Use 'data_ws.csv' and 'probabilities_ws.npy" and start in the middle of the notebook
 Start from and skip generate process
 
-'''
+```
 data = df.read_csv('data_ws.csv')
 probabilities = df.read_csv('probabilities_ws.csv')
-'''
+```
 
 See the CONTRIBUTING file for how to help out.
 
