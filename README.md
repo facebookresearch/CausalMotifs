@@ -9,13 +9,13 @@ This repository contains code to replicate the simulation results in the paper. 
 There are two ways to run the Watts-Strogatz simulation notebook:
 1. Run all the code (including network generation and MC replicates) --- takes long time
 A fast way to run it (it can be run locally; uploading probabilities_ws.csv may be too large to upload to bento):
-2. Download: from https://drive.google.com/drive/folders/1PuPXJLVqv_i2sBYtD08a5RhSaxmRhwG4 and start in the middle
+2. Use 'data_ws.csv' and 'probabilities_ws.npy" and start in the middle of the notebook
 Start from and skip generate process
-“””
-data = df.read_csv(‘data_ws.csv’)
-probabilities = df.read_csv(probabilities_ws.csv’)
-“””
 
+'''
+data = df.read_csv('data_ws.csv')
+probabilities = df.read_csv('probabilities_ws.csv')
+'''
 
 See the CONTRIBUTING file for how to help out.
 
