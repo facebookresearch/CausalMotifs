@@ -31,6 +31,7 @@ See _requirements.txt_ for prerequisite Python packages.
 #### Training
 
 _causalPartition.py_ contains the class of the main algorithm
+
 _example.py_ illustrates the usage. It has the following steps
 
 **Data loading and cleaning**. It loads the two files generated before, and then clean the data to satisfy positivity requirement
