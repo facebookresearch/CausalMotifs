@@ -33,29 +33,27 @@ See _requirements.txt_ for prerequisite Python packages.
 _causalPartition.py_ contains the class of the main algorithm
 _example.py_ illustrates the usage. It has the following steps
 
-- **Data loading and cleaning**. It loads the two files generated before, and then clean the data to satisfy positivity requirement
+**Data loading and cleaning**. It loads the two files generated before, and then clean the data to satisfy positivity requirement
 
-- **Training**. Training the data to generate the partitions (exposure conditions).
+**Training**. Training the data to generate the partitions (exposure conditions).
 
-1. Create a _causalPartition_ class
-``
+- Create a _causalPartition_ class
+```
 partition = causalPartition(data_, probabilities_, 'assignment')
-``
-1. Train and split the space for the interference vector
-``
+```
+- Train and split the space for the interference vector
+```
 train_result_nonseparate = partition.split_exposure_hajek(True, outcome, input_features, max_attempt=10, eps=0.01, delta=0.001, criteria={'non_trivial_reduction': 0, 'reasonable_propensity': 0.05})
-``
-1. Plot the training tree
-``
+```
+- Plot the training tree
+```
 partition.plot_tree(train_result_separate)
-``
-1. Sample spliting and plot the estimation tree
-``
+```
+- Sample spliting and plot the estimation tree
+```
 est_result_separate = partition.estimate_exposure_hajek(train_result_separate, input_features, outcome, eps=0.01, separate=True)
-``
-``
 partition.plot_tree(est_result_separate)
-``
+```
 
 We implemented three different splitting criteria (as the parameter _criteria_). This is a _dict_, and please use the key to specify the splitting criterion and the value for the parameter.
 
@@ -87,3 +85,5 @@ author = {Yuan, Yuan and Altenburger, Kristen M. and Kooti, Farshad},
  year = {2021}
 }
 ```
+
+This is one implementation of the method. Possible improvements are also discussed in the paper. 
