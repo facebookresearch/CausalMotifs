@@ -21,29 +21,35 @@ Please use Python 3
 See _requirements.txt_ for prerequisite Python packages.
 
 #### Generating network
-_generate_WS.py_ generates the Watts-Strogatz simulation network discussed in the paper. It outputs two files:
+
+- _generate_WS.py_ generates the Watts-Strogatz simulation network discussed in the paper. It outputs two files:
+
 - _data_ws.csv_: a table file that stores the interference vector, covariates, and outcome.
+
 - _probabilities_ws.npy_: a numpy file that stores the bootstrapping results. It is a  [num_replicates * num_observations * dimension_interference_vector] tensor.
 
 #### Training
 
 _causalPartition.py_ contains the class of the main algorithm
 _example.py_ illustrates the usage. It has the following steps
+
 - **Data loading and cleaning**. It loads the two files generated before, and then clean the data to satisfy positivity requirement
+
 - **Training**. Training the data to generate the partitions (exposure conditions).
--- Create a _causalPartition_ class
+
+1. Create a _causalPartition_ class
 ``
 partition = causalPartition(data_, probabilities_, 'assignment')
 ``
--- Train and split the space for the interference vector
+1. Train and split the space for the interference vector
 ``
 train_result_nonseparate = partition.split_exposure_hajek(True, outcome, input_features, max_attempt=10, eps=0.01, delta=0.001, criteria={'non_trivial_reduction': 0, 'reasonable_propensity': 0.05})
 ``
--- Plot the training tree
+1. Plot the training tree
 ``
 partition.plot_tree(train_result_separate)
 ``
--- Sample spliting and plot the estimation tree
+1. Sample spliting and plot the estimation tree
 ``
 est_result_separate = partition.estimate_exposure_hajek(train_result_separate, input_features, outcome, eps=0.01, separate=True)
 ``
