@@ -5,7 +5,7 @@
 This repository provides a reference implementation of  _CausalMotifs_  as described in the [paper](https://arxiv.org/abs/2010.09911):  
 > Causal Network Motifs: Identifying Heterogeneous Spillover Effects in A/B Tests.  
 > Yuan Yuan, Kristen M. Altenburger, and Farshad Kooti.  
-> WWW'2021.
+> TheWebConf'2021.
 
 
 ### Documentation 
